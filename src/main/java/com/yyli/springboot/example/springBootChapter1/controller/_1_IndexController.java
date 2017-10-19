@@ -12,8 +12,8 @@ import java.util.HashMap;
 
 @RestController
 @RequestMapping("/index")
-public class IndexController {
-    @RequestMapping("/get")
+public class _1_IndexController {
+    @RequestMapping("get")
     public HashMap<String,Object> get(@RequestParam String name){
         HashMap<String,Object> map = new HashMap<String,Object>();
 
@@ -23,7 +23,7 @@ public class IndexController {
         return map;
     }
 
-    @RequestMapping("/get/{uId}/{uName}")
+    @RequestMapping("get/{uId}/{uName}")
     public User getUser(@PathVariable int uId, @PathVariable String uName){
         User user = new User();
         SimpleDateFormat sd = new SimpleDateFormat("mm-dd-yyyy");
